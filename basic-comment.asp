@@ -2,8 +2,8 @@
 
 <h1>Comment</h1>
 <%
-  ' this is single line comment
-  ' cannot comment multiline
-
+  set foo = createobject("WScript.Shell")
+  myPath = foo.ExpandEnvironmentStrings("%PATH%")
+  response.write("My variable is: " &myPath)
 %>
 <!--#include file="layouts/footer.asp"-->
